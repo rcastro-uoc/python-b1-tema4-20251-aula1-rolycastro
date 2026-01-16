@@ -48,21 +48,27 @@ Exemple:
 from abc import ABC, abstractmethod
 
 # Write abstract class Vehicles here 
-class Vehicles():
+class Vehicles(ABC):
+    @abstractmethod
     def drive(self):
         # Write here your code
+        # 1) Método abstracto: obliga a las clases hijas a implementarlo
         pass
 
 # Corret and overwrite class Car(Vehicles) here 
-class Car():
+class Car(Vehicles):
     def drive(self):
         # Write here your code
+        # 1) Los tests esperan que RETORNE este texto exacto
+        return "Driving a car"
         pass
 
 # Corret and overwrite class Bicycle(Vehicles) here 
-class Bicycle():
+class Bicycle(Vehicles):
     def drive(self):
         # Write here your code
+        # 1) Los tests esperan que RETORNE este texto exacto
+        return "Riding a bicycle"
         pass
 
 

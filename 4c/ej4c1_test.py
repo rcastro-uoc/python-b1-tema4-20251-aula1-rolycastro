@@ -16,3 +16,8 @@ def test_describe_student():
     assert s.describe() == "Mary is 22 years old. Studies Computer Science.", "describe does not return the correct value for input Student('Mary', 22, 'Computer Science'). It should be 'Mary is 22 years old. Studies Computer Science.'"
     assert s.major == "Computer Science", "major does not return the correct value for input Student('Mary', 22, 'Computer Science'). It should be 'Computer Science'"
     assert isinstance(s, Person), "Student is not a subclass of Person"
+
+
+# Para ejecutar test
+# abrir "ej4c1_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4c1_test.py -q

@@ -73,3 +73,7 @@ def test_create_list_with_negative_length():
     # WHEN / THEN
     with pytest.raises(ValueError):
         create_list(length_list)
+
+# Para ejecutar test
+# abrir "ej4b3_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4b3_test.py -q

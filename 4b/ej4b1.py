@@ -46,13 +46,30 @@ Exemple:
 def squared_sum_ram(numbers_list):
     # Store the list in RAM
     # Write here your code
+
+    # 1) Validación básica: debe ser una lista
+    if not isinstance(numbers_list, list):
+        raise TypeError("numbers_list debe ser una lista")
+
+    # 2) Variable acumuladora (empieza en 0)
+    total = 0
+
+    # 3) Recorremos la lista con un bucle for y sumamos cada cuadrado
+    for num in numbers_list:
+        if not isinstance(num, int):
+            raise TypeError("numbers_list debe contener solo enteros")
+        total += num ** 2
+
+    # 4) Devolvemos el resultado final
+    return total
     pass
 
 
 def squared_sum_heap(numbers_list):
     # Store the list in Heap
     # You should correct and overwrite something in the following line.
-    squared_sum_list = [num**1 for num in numbers_list]
+    # El error estaba aquí: num**1 no eleva al cuadrado, solo deja el mismo número.
+    squared_sum_list = [num ** 2 for num in numbers_list]
     heap_sum = sum(squared_sum_list)
     return heap_sum
 

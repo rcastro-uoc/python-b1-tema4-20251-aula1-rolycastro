@@ -12,3 +12,7 @@ def test_talk_animals():
     assert perro.name == "Fido", "Dog.name does not return the correct value for input 'Fido'. It should be 'Fido'"
     assert gato.name == "Felix", "Cat.name does not return the correct value for input 'Felix'. It should be 'Felix'"
     assert loro.name == "Polly", "Parrot.name does not return the correct value for input 'Polly'. It should be 'Polly'"
+
+# Para ejecutar test
+# abrir "ej4c4_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4c4_test.py -q

@@ -55,27 +55,45 @@ Exemple:
          "Polly"        
 """
 # Write abstract class Animal here
+from abc import ABC, abstractmethod
+
+# Abstract class Animal
+class Animal(ABC):
+    def __init__(self, name):
+        # 1) Guardamos el nombre común a todos los animales
+        self.name = name
+
+    @abstractmethod
+    def talk(self):
+        # 2) Método abstracto: cada animal debe “hablar” diferente
+        pass
 
 # Corret and overwrite class Dog(Animal) here 
-class Dog():
+class Dog(Animal):
     def __init__(self, name):
+        super().__init__(name)
         self.name = name
 
     def talk(self):
+        return "¡Guau!"
         pass
 
 # Corret and overwrite class Cat(Animal) here 
-class Cat():
+class Cat(Animal):
     def __init__(self, name):
+        super().__init__(name)
         self.name = name
     def talk(self):
+        return "¡Meow!"
         pass
 
 # Corret and overwrite class Parrot(Animal) here 
-class Parrot():
+class Parrot(Animal):
     def __init__(self, name):
+        super().__init__(name)
         self.name = name
     def talk(self):
+        return "¡Whistle!"
         pass
 
 
@@ -90,4 +108,4 @@ def test_code():
 	for animal in animals:
 	    print(f"{animal.name} dice {animal.talk()}")
 
-#test_code()
+test_code()

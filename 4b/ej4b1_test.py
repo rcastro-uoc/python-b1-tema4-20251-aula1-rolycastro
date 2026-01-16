@@ -13,3 +13,7 @@ def test_squared_sum_heap():
     numbers_list = [6, 4, 7]
     expected_result = 101
     assert squared_sum_heap(numbers_list) == expected_result, "squared_sum_heap does not return the correct value for input [6, 4, 7]. It should be 101"
+
+# Para ejecutar test
+# abrir "ej4b1_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4b1_test.py -q

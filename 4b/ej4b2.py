@@ -52,6 +52,28 @@ Exemple:
 def average_score_ram(scores_dict):
     # Store the dictionary in RAM
     # Write here your code
+
+    # 1) Validación de tipo
+    if not isinstance(scores_dict, dict):
+        raise TypeError("scores_dict debe ser un diccionario")
+
+    # 2) Caso borde: no se puede promediar un diccionario vacío
+    if len(scores_dict) == 0:
+        raise ValueError("scores_dict no puede estar vacío")
+
+    # 3) Acumuladores
+    total = 0.0
+    count = 0
+
+    # 4) Recorremos el diccionario con .items() -> (nombre, nota)
+    for student_name, score in scores_dict.items():
+        if not isinstance(score, (int, float)):
+            raise TypeError(f"La nota de {student_name} no es numérica")
+        total += float(score)
+        count += 1
+
+    # 5) Promedio
+    return total / count
     pass
 
 
@@ -59,9 +81,15 @@ def average_score_heap(scores_dict):
     # Store the dictionary in Heap    
     score_list = list(scores_dict.values())
     # You should correct and overwrite something in the following line.
-    heap_average = sum(score_list) 
-    return heap_average
+    
+    # Evitar división entre 0 si está vacío
+    if len(score_list) == 0:
+        raise ValueError("scores_dict no puede estar vacío")
 
+    # El error: faltaba dividir entre el número de notas
+    heap_average = sum(score_list) / len(score_list)
+    return float(heap_average)
+    
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script

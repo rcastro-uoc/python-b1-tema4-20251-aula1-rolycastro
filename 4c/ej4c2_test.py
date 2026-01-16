@@ -23,3 +23,7 @@ class TestVehicles:
     def test_drive_bicycle_instance_of_vehicles_class(self):
         bicycle = Bicycle()
         assert isinstance(bicycle, Vehicles), "Bicycle should be an instance of Vehicles"
+
+# Para ejecutar test
+# abrir "ej4c2_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4c2_test.py -q

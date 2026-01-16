@@ -83,6 +83,25 @@ def create_list(length_list):
     """
 
     # Write here your code
+    # 1) Validación de entrada
+    if not isinstance(length_list, int):
+        raise TypeError("length_list debe ser un entero")
+
+    # Si es negativo, error (mensaje exacto pedido)
+    if length_list < 0:
+        raise ValueError("The number must be positive")
+
+    # 2) Creamos la lista “RAM” (la primera lista)
+    ram_list = []
+    for _ in range(length_list):
+        ram_list.append(random.randint(0, 100))
+
+    # 3) Creamos la lista “Heap” como COPIA INDEPENDIENTE
+    heap_list = copy.deepcopy(ram_list)
+
+    # 4) Retornamos ambas listas
+    return ram_list, heap_list
+
     pass
 
 
