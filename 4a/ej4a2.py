@@ -45,6 +45,15 @@ Exemple:
 
 def count_fruits(fruits_list):
     # Write here your code
+    if not isinstance(fruits_list, list):
+        raise TypeError("fruits_list debe ser una lista")
+
+    fruit_counter = {}
+
+    for fruit in fruits_list:
+        fruit_counter[fruit] = fruit_counter.get(fruit, 0) + 1
+
+    return fruit_counter
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script

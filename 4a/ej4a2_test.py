@@ -23,3 +23,7 @@ def test_count_fruits():
 
     fruits = ["apple", "banana", "kiwi"]
     assert count_fruits(fruits) == {"apple": 1, "banana": 1, "kiwi": 1}, "count_fruits does not return the correct value for input ['apple', 'banana', 'kiwi']. It should be {'apple': 1, 'banana': 1, 'kiwi': 1}"
+
+# Para ejecutar test
+# abrie "ej4a2_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4a2_test.py -q

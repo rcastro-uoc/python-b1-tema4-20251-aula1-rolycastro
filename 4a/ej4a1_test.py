@@ -16,3 +16,7 @@ def test_find_intersection():
     lista6 = [1, 2, 3]
     resultado = find_intersection(lista5, lista6)
     assert resultado == [], "find_intersection does not return the correct value for input ([], [1, 2, 3]). It should be an empty list []"
+
+# Para ejecutar test
+# abrie "ej4a1_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4a1_test.py -q

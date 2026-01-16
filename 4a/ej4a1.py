@@ -39,6 +39,14 @@ list_2 = [4, 5, 6, 7, 8]
 
 def find_intersection(list_1, list_2):
     # Write here your code
+    if not isinstance(list_1, list) or not isinstance(list_2, list):
+        raise TypeError("list_1 y list_2 deben ser de tipo list")
+
+    try:
+        elements_in_list2 = set(list_2)
+        return [item for item in list_1 if item in elements_in_list2]
+    except TypeError:
+        return [item for item in list_1 if item in list_2]
     pass
 
 

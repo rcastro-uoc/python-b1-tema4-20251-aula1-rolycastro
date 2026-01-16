@@ -32,3 +32,8 @@ def test_add_elapsed_time():
         "Sofia": 6.5,
         "Alex": 8.7,
     }, "add_elapsed_time does not return the correct value for input {'Juan': 9.5, 'Peter': 14.2, 'Sofia': 6.5, 'Alex': 8.7}, 'Juan', 10.2. It should be {'Juan': 10.2, 'Peter': 14.2, 'Sofia': 6.5, 'Alex': 8.7}"
+
+
+# Para ejecutar test
+# abrir "ej4a4_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4a4_test.py -q

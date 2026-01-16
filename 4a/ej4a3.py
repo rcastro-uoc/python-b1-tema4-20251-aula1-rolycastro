@@ -38,11 +38,16 @@ Exemple:
 
 def descending_list_iterator(numbers_list):
     # Write here your code
+    if not isinstance(numbers_list, list):
+        raise TypeError("numbers_list debe ser una lista")
+
+    sorted_desc = sorted(numbers_list, reverse=True)
+    return iter(sorted_desc)
     pass
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# numeros = [2, 3, 6, 9, 11, 12, 15, 18]
-# print(list(descending_list_iterator(numeros)))  
+numeros = [2, 3, 6, 9, 11, 12, 15, 18]
+print(list(descending_list_iterator(numeros)))  
