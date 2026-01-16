@@ -16,3 +16,7 @@ def test_descending_list_iterator():
 
     # Test with a list of negative numbers
     assert list(descending_list_iterator([-5, -1, -8, -3, -2])) == [-1, -2, -3, -5, -8], "descending_list_iterator does not return the correct value for input [-5, -1, -8, -3, -2]. It should be [-1, -2, -3, -5, -8]"
+
+# Para ejecutar test
+# abrir "ej4a3_test.py" en una nueva terminal "Open in integrated terminal"
+# python -m pytest ej4a3_test.py -q

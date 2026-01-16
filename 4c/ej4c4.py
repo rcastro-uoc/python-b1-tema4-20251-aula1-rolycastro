@@ -108,4 +108,4 @@ def test_code():
 	for animal in animals:
 	    print(f"{animal.name} dice {animal.talk()}")
 
-test_code()
+#test_code()
